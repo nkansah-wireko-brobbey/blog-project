@@ -1,0 +1,90 @@
+# Root .gitignore for monorepo
+
+### Python ###
+# Pipenv
+backend/Pipfile.lock
+backend/.venv/
+
+# Byte-compiled / optimized / DLL files
+backend/__pycache__/
+backend/*/__pycache__/
+backend/*/*/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+
+# Django
+backend/db.sqlite3
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Static files
+backend/staticfiles/
+backend/media/
+
+# PyCharm
+.idea/
+backend/.idea/
+
+### Node ###
+# Next.js
+blog-frontend/.next/
+blog-frontend/out/
+blog-frontend/node_modules/
+
+# Logs
+blog-frontend/npm-debug.log*
+blog-frontend/yarn-debug.log*
+blog-frontend/yarn-error.log*
+
+# Environment variables
+blog-frontend/.env
+blog-frontend/.env.local
+blog-frontend/.env*.local
+
+# Debug files
+blog-frontend/.vscode/
+blog-frontend/.DS_Store
+
+# Testing
+blog-frontend/coverage/
+
+### System ###
+.DS_Store
+Thumbs.db
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Visual Studio Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+/blog-frontend/node_modules/
