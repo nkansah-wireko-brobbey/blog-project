@@ -88,3 +88,7 @@ Temporary Items
 !.vscode/extensions.json
 *.code-workspace
 /blog-frontend/node_modules/
+
+
+# Migrations
+/backend/blog/migrations/
