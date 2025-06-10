@@ -1,3 +1,17 @@
 from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
+from .posts.post_service import create_post_service
 
 # Create your views here.
+
+@api_view(['POST'])
+def create_post_view(request):
+
+    try:
+        response_data = create_post_service(request.data)
+        return Response(response_data,status=200)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
