@@ -18,11 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from blog.views import create_post_view
+from blog.views import create_post_view, create_tag_view
 from blog.views import create_category_view
 
 urlpatterns = [
     path("api/posts/", create_post_view),
     path("api/category/", create_category_view),
+    path("api/tag/", create_tag_view),
     path("admin/", admin.site.urls),
 ]
